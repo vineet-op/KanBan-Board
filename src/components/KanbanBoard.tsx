@@ -154,7 +154,7 @@ function KanbanBoard() {
               ))}
             </SortableContext>
           </div>
-          <button
+          {/* <button
             onClick={() => {
               createNewColumn();
             }}
@@ -176,7 +176,7 @@ function KanbanBoard() {
           >
             <PlusIcon />
             Add Column
-          </button>
+          </button> */}
         </div>
 
         {createPortal(
@@ -232,14 +232,14 @@ function KanbanBoard() {
     setTasks(newTasks);
   }
 
-  function createNewColumn() {
-    const columnToAdd: Column = {
-      id: generateId(),
-      title: `Column ${columns.length + 1}`,
-    };
+  // function createNewColumn() {
+  //   const columnToAdd: Column = {
+  //     id: generateId(),
+  //     title: `Column ${columns.length + 1}`,
+  //   };
 
-    setColumns([...columns, columnToAdd]);
-  }
+  //   setColumns([...columns, columnToAdd]);
+  // }
 
   function deleteColumn(id: Id) {
     const filteredColumns = columns.filter((col) => col.id !== id);

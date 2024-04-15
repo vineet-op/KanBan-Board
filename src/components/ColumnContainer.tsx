@@ -1,9 +1,9 @@
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import TrashIcon from "../icons/TrashIcon";
+// import TrashIcon from "../icons/TrashIcon";
 import { Column, Id, Task } from "../types";
 import { CSS } from "@dnd-kit/utilities";
 import { useMemo, useState } from "react";
-import PlusIcon from "../icons/PlusIcon";
+// import PlusIcon from "../icons/PlusIcon";
 import TaskCard from "./TaskCard";
 
 interface Props {
@@ -19,9 +19,9 @@ interface Props {
 
 function ColumnContainer({
   column,
-  deleteColumn,
+  // deleteColumn,
   updateColumn,
-  createTask,
+  // createTask,
   tasks,
   deleteTask,
   updateTask,
@@ -143,7 +143,7 @@ function ColumnContainer({
             />
           )}
         </div>
-        <button
+        {/* <button
           onClick={() => {
             deleteColumn(column.id);
           }}
@@ -157,7 +157,7 @@ function ColumnContainer({
         "
         >
           <TrashIcon />
-        </button>
+        </button> */}
       </div>
 
       {/* Column task container */}
@@ -174,7 +174,7 @@ function ColumnContainer({
         </SortableContext>
       </div>
       {/* Column footer */}
-      <button
+      {/* <button
         className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
         onClick={() => {
           createTask(column.id);
@@ -182,7 +182,7 @@ function ColumnContainer({
       >
         <PlusIcon />
         Add task
-      </button>
+      </button> */}
     </div>
   );
 }
